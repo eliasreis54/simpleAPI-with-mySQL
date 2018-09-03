@@ -1,10 +1,13 @@
 package com.pratice2.pratice.controllers;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,5 +39,11 @@ public class EmployedController {
 		response.setData(this.service.saveEmployed(employedDTO));
 		
 		return ResponseEntity.ok(response);
+	}
+	
+	@GetMapping
+	public List<Employed> getAll(){
+		
+		return this.service.getAll();
 	}
 }
