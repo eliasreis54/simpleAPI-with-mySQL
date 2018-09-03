@@ -11,6 +11,10 @@ public class teste {
 	public void setTeste(int teste) {
 		this.teste = teste;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "teste do toString [teste=" + teste + "]";
+	}
 	
 }
