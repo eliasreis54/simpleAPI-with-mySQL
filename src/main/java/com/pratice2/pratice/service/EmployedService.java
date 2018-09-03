@@ -1,5 +1,7 @@
 package com.pratice2.pratice.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +33,9 @@ public class EmployedService {
 		emp.setCpf(employedDTO.getCpf());
 		
 		return this.repository.save(emp);
+	}
+	
+	public List<Employed> getAll() {
+		return this.repository.findAll();
 	}
 }
