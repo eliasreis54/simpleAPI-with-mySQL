@@ -12,5 +12,8 @@ public class teste {
 		this.teste = teste;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "teste [teste=" + teste + "]";
+	}
 }
